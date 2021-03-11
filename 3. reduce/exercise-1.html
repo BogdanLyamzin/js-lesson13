@@ -18,6 +18,11 @@
         "Винни-Пух жарил яичницу на раскаленном модеме",
         "Иа-Иа был лучшим программистом леса"
     ];
+
+    const wordCount = phrases.reduce((accum, curValue)=> {
+        return accum + curValue.split(" ").length;
+    }, 0);
+    console.log(wordCount);
 </script>
 </body>
 </html>

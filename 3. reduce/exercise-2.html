@@ -28,7 +28,14 @@
             name: "Capellana червоне сухе 0.75 л 13.5%",
             price: 229
         }
-    ]
+    ];
+        // let sum = 0;
+        // wines.forEach(({price}) => sum +=price);
+        // console.log(sum)
+    const count = wines.reduce((accum, wine)=> {
+        return accum + wine.price;
+    }, 0);
+    console.log(count)
 </script>
 </body>
 </html>

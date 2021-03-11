@@ -13,10 +13,26 @@
 
     const phrases = [
         "Долгая дорога в дюнах привела меня к оазису",
-        "настоящие злодеи пьют кровь поверженных врагов",
+        "Настоящие злодеи пьют кровь поверженных врагов",
         "Винни-Пух жарил яичницу на раскаленном модеме",
         "Иа-Иа был лучшим программистом леса"
     ];
+
+    const longPhrase = phrases.reduce((acc, value) => {
+        if(acc.length < value.length){
+            return value;
+        }
+        return acc;
+    });
+    // const longPhrase = phrases.reduce((acc, value) => (acc.length < value.length)? value : acc );
+    /*
+    let logPhrase = phrases[0];
+    for(let i = 1; i < phrases[0]; i++){
+        if(logPhrase.length < phrases[i].length){
+            logPhrase = phrases[i]
+        }
+    }
+    */
 </script>
 </body>
 </html>

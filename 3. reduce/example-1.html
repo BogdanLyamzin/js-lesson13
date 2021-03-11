@@ -5,6 +5,41 @@
     <title>Title</title>
 </head>
 <body>
-
+    <script>
+        const sallaries = [12000, 15600, 76000, 8400];
+        const sum = sallaries.reduce((accumulator, currentValue)=> {
+            return accumulator + currentValue;
+        }, initialValue = 0);
+        /*
+        const func = (accumulator, currentValue)=> {
+            return accumulator + currentValue;
+        };
+        let storage;
+        if(initialValue !== undefined){
+            storage = initialValue;
+            for(let i = 0; i < sallaries.length; i +=1){
+                const elem = sallaries[i];
+                storage = func(storage, elem, i, sallaries);
+            }
+            delete func;
+            const sum = storage;
+        }
+        else {
+            storage = sallaries[0];
+            for(let i = 1; i < sallaries.length; i +=1){
+                const elem = sallaries[i];
+                storage = func(storage, elem, i, sallaries);
+            }
+            delete func;
+            const sum = storage;            
+        }
+        */
+        console.log(sum)
+        // let sum = 0;
+        // for(const sallary of sallaries){
+        //     sum += sallary;
+        // }
+        // console.log(sum)
+    </script>
 </body>
 </html>

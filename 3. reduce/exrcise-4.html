@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    /*
+    напишите код, который считает общую стоимость винного погреба
+    */
+
+    const alcohol = [
+        {
+            name: "Aurochs червоне сухе 0.75 л 13.5%",
+            price: 199,
+            category: "wine"
+        },
+        {
+            name: "Champagne Veuve Olivier & Fil 0.75 л 12%",
+            price: 1330,
+            category: "champange"
+        },
+        {
+            name: "Набір American Dream 4.5 л",
+            price: 2332,
+            category: "champange"
+        },
+        {
+            name: "Jack Daniels",
+            price: 229,
+            category: "whisky"
+        }
+    ];
+
+    const uniqueCategories = alcohol.reduce((acc, value)=> {
+      if(!acc.includes(value.category)){
+        // acc.push(value.category);
+        return [...acc, value.category];
+      }
+      return [...acc];
+    }, []);
+    // const uniqueCategories = alcohol.reduce((acc, value)=> (!acc.includes(value.category)) ? [...acc, value.category] : [...acc], []);
+    // const uniqueCategories = alcohol.reduce((acc, {category})=> (!acc.includes(category)) ? [...acc, category] : [...acc], []);
+    console.log(uniqueCategories)
+    
+        // const categories = alcohol.map(item => item.category);
+        // const uniqueCategories = new Set(categories)
+
+    /*
+        const alcoholCategories = [];
+        alcohol.forEach(item => {
+          if(!alcoholCategories.includes(item.category)){
+            alcoholCategories.push(item.category)
+          }
+        });
+        console.log(alcoholCategories)
+        */
+</script>
+</body>
+</html>

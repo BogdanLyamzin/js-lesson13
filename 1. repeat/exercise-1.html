@@ -10,11 +10,12 @@
     /*
     У вас есть массивы, описывающие 2 клуба -
     любителей кошек и любителей собак.
-    Создайте массив людей, которые ходят в первый клуб, но не ходят во второй.
+    Создайте массив людей, которые ходят в первый клуб, 
+    но не ходят во второй.
     Фильтрацию проводите по фамилии людей.
     */
 
-    const dogLovers = [
+    const jehovahWitnesses = [
         {
             name: "Алиса",
             lastName: "Метелина"
@@ -32,7 +33,7 @@
             lastName: "Семеренко"
         },
     ];
-    const catLovers = [
+    const seventhDayAdventists = [
         {
             name: "Анна",
             lastName: "Хвостова"
@@ -54,6 +55,35 @@
             lastName: "Владыка"
         },
     ];
+
+        // const heavenPeopleList = [];
+        const lastNameList = seventhDayAdventists.map((item) => item.lastName); // массив фамилий людей из второй секты
+        // const heavenPeopleList = jehovahWitnesses.filter((item) => !lastNameList.includes(item.lastName) )
+        const heavenPeopleList = jehovahWitnesses.filter(({lastName}) => !lastNameList.includes(lastName) )
+        // const heavenPeopleList = jehovahWitnesses.filter(({lastName}) => !seventhDayAdventists.find(item => item.lastName === lastName) )
+        console.log(heavenPeopleList)
+        /*
+        jehovahWitnesses.forEach(item => {
+            const result = seventhDayAdventists.find(({lastName}) => item.lastName === lastName)
+            if(!result){
+                heavenPeopleList.push(item)
+            }
+        });
+        console.log(heavenPeopleList)
+        */
+        /*
+        jehovahWitnesses.forEach(item => {
+            let passed = false;
+            seventhDayAdventists.forEach(elem => {
+                if(elem.lastName === item.lastName) {
+                    passed = true;
+                }
+            });
+            if(!passed){
+                heavenPeopleList.push(item);
+            }
+        })
+        */
 </script>
 </body>
 </html>

@@ -14,10 +14,18 @@
 
     const phrases = [
         "Долгая дорога в дюнах привела меня к оазису",
-        "настоящие злодеи пьют кровь поверженных врагов",
+        "Иа-Иа был лучшим программистом леса",
+        "Настоящие злодеи пьют кровь поверженных врагов",
         "Винни-Пух жарил яичницу на раскаленном модеме",
-        "Иа-Иа был лучшим программистом леса"
     ];
+
+    const newPhrases = [...phrases].sort((phrase2, phrase1)=> {
+        const phrase2WordCount = phrase2.split(" ").length;
+        const phrase1WordCount = phrase1.split(" ").length;
+        return phrase1WordCount - phrase2WordCount
+    });
+    console.log(newPhrases)
+
 
 </script>
 </body>
